@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   DefaultValues,
   FieldValues,
+  Path,
   SubmitHandler,
   useForm,
   UseFormReturn,
@@ -21,6 +22,7 @@ import {
 import { Input } from "./ui/input";
 import Link from "next/link";
 import { FIELD_NAMES } from "@/constants";
+import { ImageUpload } from "./ImageUpload";
 
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
@@ -68,6 +70,7 @@ const AuthForm = <T extends FieldValues>({
                     <FormLabel className="capitalize">{FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}</FormLabel>
 
                     <FormControl>
+                      {field.name === "universityCard" ? <ImageUpload/> : <p></p>}
                       <Input placeholder="username" {...field} />
                     </FormControl>
 
