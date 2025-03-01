@@ -188,7 +188,7 @@ export const navigationLinks = [
         "https://m.media-amazon.com/images/I/81Dky+tD+pL._AC_UF1000,1000_QL80_.jpg",
       video: "/sample-video.mp4?updatedAt=1722593504152",
       summary:
-        "financial success and decision-making.",
+        "financial success .",
     },
   ];
 
